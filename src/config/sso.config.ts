@@ -1,27 +1,8 @@
-import SSO, { type Config, CustomStorage } from "../../../avatar-sso/src/main";
+import SSO from "../../../sso-sdk/src/main";
 
-class LocalSSO extends SSO {
-  protected ssoServerUrl = "http://localhost:5001/api/v1";
-
-  constructor(config: Config) {
-    super(config);
-  }
-}
-
-const sso = new LocalSSO({
+const sso = new SSO({
   sdkKey:
-    "ody_live_f6938c22c6b5b0ab9e1af931e7515533e8c6e9eb65468750a08bcb1110fe96a5",
-  storage: new CustomStorage({
-    get(key: string): string | null {
-      return localStorage.getItem(key);
-    },
-    set(key: string, value: string): void {
-      localStorage.setItem(key, value);
-    },
-    remove(key: string): void {
-      localStorage.removeItem(key);
-    },
-  }),
+    "iframe_5006caab13d431c8c45192162a7824dcc69788bd79d22148dd5abcdd16b910b4",
 });
 
 export default sso;

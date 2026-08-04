@@ -1,10 +1,12 @@
-import { useLayoutEffect, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import sso from "./config/sso.config";
 
 const App = () => {
   const email = "ashik+lll@odyssey.stream";
   const [otp, setOtp] = useState<string>("");
   // const redirectUri = window.location.origin;
+
+  const iframeRef = useRef<HTMLIFrameElement>(null);
 
   useLayoutEffect(() => {
     sso
@@ -87,6 +89,21 @@ const App = () => {
       >
         Logout
       </button>
+
+      {/* <button onClick={() => sso.getIframeSession()}>Get IFrame Token</button> */}
+
+      <br />
+      <br />
+
+      <div>
+        <div
+          ref={iframeRef}
+          style={{ width: "100%", height: "500px", backgroundColor: "red" }}
+        ></div>
+        <button onClick={() => sso.mountAvatarPicker(iframeRef.current!)}>
+          Mount Pick Avatar
+        </button>
+      </div>
     </div>
   );
 };
