@@ -2,7 +2,7 @@ import { useLayoutEffect, useRef, useState } from "react";
 import sso from "./config/sso.config";
 
 const App = () => {
-  const email = "ashik+lll@odyssey.stream";
+  const [email, setEmail] = useState<string>("ashik+lll@odyssey.stream");
   const [otp, setOtp] = useState<string>("");
   // const redirectUri = window.location.origin;
 
@@ -21,6 +21,13 @@ const App = () => {
 
   return (
     <div>
+      <input
+        type="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        placeholder="Email"
+      />
+
       <button
         onClick={() =>
           sso.login({
