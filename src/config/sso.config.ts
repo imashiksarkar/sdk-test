@@ -1,5 +1,5 @@
-import SSO from "../../../sso-sdk/src/main";
-// import SSO from "@alliumcloud/avatar-sso";
+// import SSO from "../../../sso-sdk/src/main";
+import SSO from "@alliumcloud/avatar-sso";
 
 const sso = new SSO({
   sdkKey:
