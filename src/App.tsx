@@ -105,7 +105,7 @@ const App = () => {
       <div>
         <div
           ref={iframeRef}
-          style={{ width: "100%", height: "500px", backgroundColor: "red" }}
+          style={{ width: "100%", height: "700px", backgroundColor: "red" }}
         ></div>
         <button onClick={() => sso.mountAvatarPicker(iframeRef.current!)}>
           Mount Pick Avatar
