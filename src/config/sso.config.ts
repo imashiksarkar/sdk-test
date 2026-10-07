@@ -8,6 +8,7 @@ const sso = new SSO({
   //   import.meta.env.VITE_ENV === "dev"
   //     ? "http://localhost:5001/api/v1"
   //     : undefined,
+  serverUrl: "https://api-gw-dev.2x22.com/sso/api/v1",
 });
 
 export default sso;
