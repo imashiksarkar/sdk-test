@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@alliumcloud/avatar-sso": "^2.6.2",
+    "@alliumcloud/avatar-sso-internal": "^2.6.2-dev.210e2bb",
     "react": "^19.2.6",
     "react-dom": "^19.2.6"
   },
