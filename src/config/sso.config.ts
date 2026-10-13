@@ -3,7 +3,7 @@ import SSO from "@alliumcloud/avatar-sso-internal";
 
 const sso = new SSO({
   sdkKey:
-    "ac_sso_development_nPFloixt5Qwt_INGtiSdAdERbxnmEF6lRBCBDj29YQK7uSZR7Dy9l",
+    "ac_sso_development_96dISp2w4RSy_cXsJNIuovpEAhTjhFE4n4iEOSiJ8PSI1aMecvMbd",
   // serverUrl:
   //   import.meta.env.VITE_ENV === "dev"
   //     ? "http://localhost:5001/api/v1"
